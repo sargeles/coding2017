@@ -1,4 +1,4 @@
-package sargeles.data_structure;
+package sargeles.data_structure.stack;
 
 import sargeles.data_structure.array.ArrayList;
 
