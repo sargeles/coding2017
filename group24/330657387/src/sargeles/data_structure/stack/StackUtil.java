@@ -52,9 +52,17 @@ public class StackUtil {
 	 * 注意：只能使用Stack的基本操作，即push,pop,peek,isEmpty， 可以使用另外一个栈来辅助
 	 */
 	public static void reverse(Stack<Integer> s) {
+		if(s == null || s.isEmpty()) {
+        	return;
+        }
 		
-		
-		
+		Stack<Integer> helper = new Stack<Integer>();
+		while(!s.empty()){
+			helper.push(s.pop());
+		}
+		while(!helper.empty()){
+			s.push(helper.pop());
+		}
 	}
 	public static void addToBottom(Stack<Integer> s,  Integer value){
 		
@@ -75,8 +83,9 @@ public class StackUtil {
 	 * @return
 	 */
 	public static Object[] getTop(Stack s,int len) {
-		
-		
+		Object[] result;
+	
+		return null;
 	}
 	/**
 	 * 字符串s 可能包含这些字符：  ( ) [ ] { }, a,b,c... x,yz
@@ -88,7 +97,7 @@ public class StackUtil {
 	 */
 	public static boolean isValidPairs(String s){
 		
-		
+		return false;
 	}
 	
 	
