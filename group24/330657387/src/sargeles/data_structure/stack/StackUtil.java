@@ -96,7 +96,34 @@ public class StackUtil {
 	 * @return
 	 */
 	public static boolean isValidPairs(String s){
-		
+		Stack temp = new Stack();
+		char[] chars = s.toCharArray();
+		for(char c : chars){
+			switch(c){
+			case '{':temp.push(c);break;
+			case '[':temp.push(c);break;
+			case '(':temp.push(c);break;
+			case '}':
+				if('{' != (char)temp.pop() || temp.isEmpty()){
+					return false;
+				}else{
+					break;
+				}
+			case ']':
+				if(']' != (char)temp.pop() || temp.isEmpty()){
+					return false;
+				}else{
+					break;
+				}
+			case ')':
+				if(')' != (char)temp.pop() || temp.isEmpty()){
+					return false;
+				}else{
+					break;
+				}
+			}
+			
+		}
 		return false;
 	}
 	
